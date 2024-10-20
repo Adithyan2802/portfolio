@@ -7,8 +7,9 @@ import CanvasLoader from "../components/CanvasLoader.jsx";
 import {useMediaQuery} from "react-responsive";
 import {calculateSizes} from "@/app/constants";
 import HeroCamera from "../components/HeroCamera.jsx";
-import Button from "../components/Button.jsx";
 import {SparklesCore} from "../components/ui/sparkles";
+import BlurIn from "@/app/components/ui/blur-in";
+import ShimmerButton from "@/app/components/ui/shimmer-button";
 
 const Hero = () => {
 
@@ -29,13 +30,14 @@ const Hero = () => {
                 className="w-full h-full absolute"
                 particleColor="#FFFFFF"/>
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-                <p className="sm:text-3xl text-xl font-bold text-white text-center font-generalsans">
+                <p className="xl:text-4xl md:text-3xl sm:text-2xl text-xl title-name font-bold shadow-inner text-white text-center">
                     Adithyan Sathyanarayanan {" "}
                     <span className="waving-hand">👋</span>
                 </p>
-                <p className="hero_tag text-purple_gradient">Molding Your Vision with My Craft</p>
+                <BlurIn className="hero_tag heading-gradient" word="Molding Your Vision with My Craft"
+                        duration={2}/>
             </div>
-
+            <br/>
             <div className="w-full h-full absolute inset-0">
                 <Canvas className="w-full h-full">
                     <Suspense fallback={<CanvasLoader/>}>
@@ -52,10 +54,18 @@ const Hero = () => {
                 </Canvas>
             </div>
 
-            <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-
+            <div className="z-10 c-space w-full flex justify-center">
                 <a href="#contact" className="w-fit">
-                    <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96"/>
+                    <ShimmerButton className="shadow-2xl">
+                        <span className="relative flex h-3 w-3">
+                            <span className="btn-ping"></span>
+                            <span className="btn-ping_dot"></span>
+                        </span>
+                        <span
+                            className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                            {"   "}Let's work together
+                        </span>
+                    </ShimmerButton>
                 </a>
             </div>
         </section>

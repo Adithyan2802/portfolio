@@ -7,7 +7,7 @@ import Projects from "./sections/Projects";
 
 export default function Home() {
     return (
-        <main className="max-w-7xl mx-auto relative">
+        <main className="mx-auto relative">
             <Navbar/>
             <Hero/>
             <About/>

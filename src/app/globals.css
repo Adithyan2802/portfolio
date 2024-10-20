@@ -6,8 +6,12 @@
     scroll-behavior: smooth;
 }
 
+html {
+    background: rgb(20, 0, 48);
+    background: radial-gradient(circle, rgba(20, 0, 40, 1) 0%, rgba(6, 1, 13, 1) 50%, rgba(5, 0, 38, 1) 100%);
+}
+
 body {
-    background: #010103;
     font-family: 'Inter V', sans-serif;
 }
 
@@ -171,6 +175,16 @@ body {
     );
 }
 
+.heading-gradient {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.55) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-name {
+    @apply tracking-wide;
+}
+
 @keyframes wave-animation {
     0% {
         transform: rotate(0deg);
@@ -195,5 +209,11 @@ body {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@layer base {
+  :root {
+        --radius: 0.5rem;
     }
 }
