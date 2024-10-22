@@ -10,6 +10,7 @@ import HeroCamera from "../components/HeroCamera.jsx";
 import {SparklesCore} from "../components/ui/sparkles";
 import BlurIn from "@/app/components/ui/blur-in";
 import ShimmerButton from "@/app/components/ui/shimmer-button";
+import {Spotlight} from "@/app/components/ui/spotlight";
 
 const Hero = () => {
 
@@ -20,6 +21,19 @@ const Hero = () => {
 
     return (
         <section className="min-h-screen w-full flex flex-col relative" id="home">
+            <Spotlight
+                className="-top-40 left-0 md:left-40 md:-top-20"
+                fill="#fcba03"
+            />
+            <Spotlight
+                className="-top-40 left-20 md:left-60 md:-top-20"
+                fill="blue"
+            />
+            <Spotlight
+                className="-top-40 left-full"
+                fill="white"
+            />
+
             <SparklesCore
                 id="tsparticlesfullpage"
                 background="transparent"
@@ -29,7 +43,8 @@ const Hero = () => {
                 particleDensity={10}
                 className="w-full h-full absolute"
                 particleColor="#FFFFFF"/>
-            <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
+
+            <div className="w-full mx-auto flex flex-col sm:mt-28 mt-10 c-space gap-3">
                 <p className="xl:text-4xl md:text-3xl sm:text-2xl text-xl title-name font-bold shadow-inner text-white text-center">
                     Adithyan Sathyanarayanan {" "}
                     <span className="waving-hand">👋</span>
@@ -54,9 +69,9 @@ const Hero = () => {
                 </Canvas>
             </div>
 
-            <div className="z-10 c-space w-full flex justify-center">
+            <div className="z-10 c-space w-full flex justify-center absolute top-8">
                 <a href="#contact" className="w-fit">
-                    <ShimmerButton className="shadow-2xl">
+                    <ShimmerButton className="shadow-2xl h-4/5">
                         <span className="relative flex h-3 w-3">
                             <span className="btn-ping"></span>
                             <span className="btn-ping_dot"></span>

@@ -32,11 +32,23 @@ const config: Config = {
     			sm: 'calc(var(--radius) - 4px)'
     		},
     		animation: {
+    			spotlight: 'spotlight 2s ease .75s 1 forwards',
     			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
     			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
-    			'shiny-text': 'shiny-text 8s infinite'
+    			'shiny-text': 'shiny-text 8s infinite',
+    			meteor: 'meteor 5s linear infinite'
     		},
     		keyframes: {
+    			spotlight: {
+    				'0%': {
+    					opacity: '0',
+    					transform: 'translate(-72%, -62%) scale(0.5)'
+    				},
+    				'100%': {
+    					opacity: '1',
+    					transform: 'translate(-50%,-40%) scale(1)'
+    				}
+    			},
     			'shimmer-slide': {
     				to: {
     					transform: 'translate(calc(100cqw - 100%), 0)'
@@ -62,6 +74,19 @@ const config: Config = {
     				},
     				'30%, 60%': {
     					'background-position': 'calc(100% + var(--shiny-width)) 0'
+    				}
+    			},
+    			meteor: {
+    				'0%': {
+    					transform: 'rotate(215deg) translateX(0)',
+    					opacity: '1'
+    				},
+    				'70%': {
+    					opacity: '1'
+    				},
+    				'100%': {
+    					transform: 'rotate(215deg) translateX(-500px)',
+    					opacity: '0'
     				}
     			}
     		}
