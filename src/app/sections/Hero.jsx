@@ -20,7 +20,7 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile);
 
     return (
-        <section className="min-h-screen w-full flex flex-col relative" id="home">
+        <section className="min-h-screen flex flex-col relative" id="home">
             <Spotlight
                 className="-top-40 left-0 md:left-40 md:-top-20"
                 fill="#fcba03"
@@ -69,7 +69,7 @@ const Hero = () => {
                 </Canvas>
             </div>
 
-            <div className="z-10 c-space w-full flex justify-center absolute top-8">
+            <div className="z-10 c-space w-full flex justify-center ">
                 <a href="#contact" className="w-fit">
                     <ShimmerButton className="shadow-2xl h-4/5">
                         <span className="relative flex h-3 w-3">

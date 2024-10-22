@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer
-            className="c-space pt-7 pb-7 flex justify-between items-center flex-wrap gap-5">
+            className="max-w-7xl mx-auto c-space pt-7 pb-7 flex justify-between items-center flex-wrap gap-5">
             <p className="text-white-500">© 2024 Adithyan Sathyanarayanan. All rights reserved.</p>
 
             <div className="flex gap-3">

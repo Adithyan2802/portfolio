@@ -7,7 +7,7 @@ import Partition from "./sections/Partition";
 
 export default function Home() {
     return (
-        <main className="mx-auto relative">
+        <main className=" mx-auto relative">
             {/*<Navbar/>*/}
             <Hero/>
             <Partition/>

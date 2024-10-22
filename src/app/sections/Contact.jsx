@@ -66,7 +66,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="c-space my-20" id="contact">
+        <section className="max-w-7xl mx-auto c-space my-20" id="contact">
             {alert.show && <Alert {...alert} />}
 
             <div className="relative min-h-screen flex items-center justify-center flex-col">

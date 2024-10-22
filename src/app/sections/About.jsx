@@ -1,5 +1,5 @@
 "use client";
-import {useState} from 'react';
+import React, {useState} from 'react';
 import Globe from 'react-globe.gl';
 
 import Button from '../components/Button.jsx';
@@ -15,9 +15,12 @@ const About = () => {
             setHasCopied(false);
         }, 2000);
     };
-    
+
     return (
-        <section className="c-space my-20" id="about">
+        <section className="max-w-7xl mx-auto c-space my-20 " id="about">
+            <div className="pt-8">
+                <p className="hero_tag heading-gradient ">About</p>
+            </div>
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
