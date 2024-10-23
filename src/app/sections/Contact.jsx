@@ -1,6 +1,6 @@
 "use client";
 import emailjs from '@emailjs/browser';
-import {useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 
 import useAlert from '../hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
@@ -66,7 +66,11 @@ const Contact = () => {
     };
 
     return (
-        <section className="max-w-7xl mx-auto c-space my-20" id="contact">
+        <section className="max-w-7xl mx-auto c-space" id="contact">
+            <div className="pt-8">
+                <p className="hero_tag heading-gradient ">Contact</p>
+            </div>
+
             {alert.show && <Alert {...alert} />}
 
             <div className="relative min-h-screen flex items-center justify-center flex-col">

@@ -21,6 +21,45 @@ export const navLinks = [
     },
 ];
 
+export const slugs = [
+    "typescript",
+    "javascript",
+    "java",
+    "react",
+    "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "nextdotjs",
+    "amazonaws",
+    "postgresql",
+    "vercel",
+    "docker",
+    "jira",
+    "github",
+    "oracle",
+    "visualstudiocode",
+    "figma",
+    "unity",
+    "blender",
+    "dotnet",
+    "mongodb",
+    "adobe",
+    "python",
+    "rstudio",
+    "threedotjs"
+];
+
+export const features = [
+    {title: 'Hi, I\'m Adhi', id: 1, className: 'md:col-span-2'},
+    {title: 'My Stack', id: 2},
+    {title: 'Fast dev. Crazy site.', id: 3, className: 'md:row-span-2'},
+    {title: 'Title 4', id: 4, className: 'md:row-span-2'},
+    {title: 'Creator by passion. Coder by profession.', id: 5, className: 'md:col-span-2'},
+    {title: 'Capable, Qualified, Experienced.', id: 6},
+    {title: 'Flexible Communication', id: 7, className: 'md:col-span-2'},
+];
+
 export const myProjects = [
     {
         title: 'Podcastr - AI Podcast Platform',
