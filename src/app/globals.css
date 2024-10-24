@@ -13,6 +13,7 @@ html {
 
 body {
     font-family: 'Inter V', sans-serif;
+    overflow-x: hidden;
 }
 
 @layer utilities {
@@ -213,7 +214,7 @@ body {
 }
 
 @layer base {
-  :root {
+    :root {
         --radius: 0.5rem;
     }
 }

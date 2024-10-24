@@ -51,13 +51,35 @@ export const slugs = [
 ];
 
 export const features = [
-    {title: 'Hi, I\'m Adhi', id: 1, className: 'md:col-span-2'},
-    {title: 'My Stack', id: 2},
-    {title: 'Fast dev. Crazy site.', id: 3, className: 'md:row-span-2'},
-    {title: 'Title 4', id: 4, className: 'md:row-span-2'},
-    {title: 'Creator by passion. Coder by profession.', id: 5, className: 'md:col-span-2'},
-    {title: 'Capable, Qualified, Experienced.', id: 6},
-    {title: 'Flexible Communication', id: 7, className: 'md:col-span-2'},
+    {
+        title: 'Hi, I\'m Adhi ',
+        description: 'Innovative problem-solver with a passion for crafting seamless digital experiences. Always pushing boundaries, I merge creativity with cutting-edge technology to deliver elegant solutions that inspire.',
+        id: 1,
+        className: 'md:col-span-2'
+    },
+    {title: 'My Strength', id: 2},
+    {title: 'Fast dev. Fast site.', id: 3, className: 'md:row-span-2'},
+    {title: 'Connect & Collaborate', id: 4, className: 'md:row-span-2'},
+    {
+        title: 'Creator by passion. Coder by profession.',
+        id: 5,
+        img: '/assets/notes.svg',
+        className: 'md:col-span-2',
+        imgClass: 'mx-auto h-auto opacity-60 -translate-y-14 translate-x-10 rotate-30'
+    },
+    {
+        title: 'Capable, Qualified, Experienced.',
+        id: 6,
+        className: 'flex items-center',
+        img: '/assets/University.svg',
+        imgClass: 'mx-auto h-auto opacity-80',
+    },
+    {
+        title: 'Flexible Communication',
+        description: 'Based on Melbourne, Australia. Open to remote work worldwide.',
+        id: 7,
+        className: 'md:col-span-2'
+    },
 ];
 
 export const myProjects = [

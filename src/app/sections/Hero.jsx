@@ -44,7 +44,22 @@ const Hero = () => {
                 className="w-full h-full absolute"
                 particleColor="#FFFFFF"/>
 
-            <div className="w-full mx-auto flex flex-col sm:mt-28 mt-10 c-space gap-3">
+            <div className="z-10 c-space w-full flex justify-center mt-8">
+                <a href="#contact" className="w-fit">
+                    <ShimmerButton className="shadow-2xl h-4/5">
+                        <span className="relative flex h-3 w-3">
+                            <span className="btn-ping"></span>
+                            <span className="btn-ping_dot"></span>
+                        </span>
+                        <span
+                            className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                            {"   "}Let's work together
+                        </span>
+                    </ShimmerButton>
+                </a>
+            </div>
+
+            <div className="w-full mx-auto flex flex-col mt-4 c-space gap-3">
                 <p className="xl:text-4xl md:text-3xl sm:text-2xl text-xl title-name font-bold shadow-inner text-white text-center">
                     Adithyan Sathyanarayanan {" "}
                     <span className="waving-hand">👋</span>
@@ -67,21 +82,6 @@ const Hero = () => {
                         <directionalLight position={[10, 10, 10]} intensity={0.5}/>
                     </Suspense>
                 </Canvas>
-            </div>
-
-            <div className="z-10 c-space w-full flex justify-center ">
-                <a href="#contact" className="w-fit">
-                    <ShimmerButton className="shadow-2xl h-4/5">
-                        <span className="relative flex h-3 w-3">
-                            <span className="btn-ping"></span>
-                            <span className="btn-ping_dot"></span>
-                        </span>
-                        <span
-                            className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                            {"   "}Let's work together
-                        </span>
-                    </ShimmerButton>
-                </a>
             </div>
         </section>
     )

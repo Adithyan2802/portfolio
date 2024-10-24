@@ -29,7 +29,10 @@ const About = () => {
                             key={item.id}
                             id={item.id}
                             title={item.title}
-                            className={item.className}/>
+                            description={item.description}
+                            className={item.className}
+                            img={item.img}
+                            imgClass={item.imgClass}/>
                     )
                 )}
             </BentoGrid>
