@@ -21,9 +21,11 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
 
+        console.log(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+
         emailjs
             .send(
-                'service_y3p63r7',
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
                 'template_xbnxs2h',
                 {
                     from_name: form.name,

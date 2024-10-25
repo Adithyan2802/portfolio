@@ -76,7 +76,7 @@ export const features = [
     },
     {
         title: 'Flexible Communication',
-        description: 'Based on Melbourne, Australia. Open to remote work worldwide.',
+        description: 'Based in Melbourne, Australia. Open to remote work worldwide.',
         id: 7,
         className: 'md:col-span-2'
     },

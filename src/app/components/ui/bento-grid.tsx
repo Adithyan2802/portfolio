@@ -3,7 +3,12 @@ import {GlobeDemo} from "@/app/components/ui/gridglobe";
 import IconCloud from "@/app/components/ui/icon-cloud";
 import {slugs} from "@/app/constants";
 import Confetti, {ConfettiRef} from "@/app/components/ui/confetti";
-import {useRef} from "react";
+import {useRef, useState} from "react";
+import Meteors from "@/app/components/ui/meteors"
+import Ripple from "@/app/components/ui/ripple"
+import {AnimatedSubscribeButton} from "@/app/components/ui/animated-subscribe-button"
+import {CheckIcon, ChevronRightIcon} from "lucide-react"
+import PulsatingButton from "@/app/components/ui/pulsating-button";
 
 export const BentoGrid = ({
                               className,
@@ -40,6 +45,23 @@ export const BentoGridItem = ({
     imgClass?: string;
 }) => {
     const confettiRef = useRef<ConfettiRef>(null);
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [hasCopied, setHasCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText('adithyan2802@gmail.com');
+        setHasCopied(true);
+
+        setTimeout(() => {
+            setHasCopied(false);
+        }, 2000);
+    };
+
+    const openResume = () => {
+        window.open('/assets/resume.pdf', '_blank');
+    };
+
     return (
 
         <div
@@ -49,6 +71,8 @@ export const BentoGridItem = ({
             )}
         >
             {id === 2 && <IconCloud iconSlugs={slugs}/>}
+
+            {id === 3 && <Meteors number={30}/>}
 
             {id === 6 && (
                 <Confetti
@@ -102,6 +126,52 @@ export const BentoGridItem = ({
                 </div>
             )}
             {id === 7 && <GlobeDemo/>}
+
+            {id === 3 && (
+                <div>
+                    <img
+                        src='/assets/flash.svg'
+                        alt='/assets/flash.svg'
+                        className='object-center object-cover w-2/3 mx-auto transition-transform duration-700 ease-in-out group-hover/bento:scale-150'
+                    />
+                </div>
+            )}
+
+            {id === 4 && (
+                <div>
+                    <Ripple/>
+                    <img
+                        src='/assets/handshake.svg'
+                        alt='/assets/handshake.svg'
+                        className='object-center object-cover mx-auto scale-50 transition-transform duration-700 ease-in-out group-hover/bento:scale-75'
+                    />
+                </div>)}
+
+            {id === 4 && (
+                <div className='mx-auto flex flex-col justify-center items-center'>
+                    <PulsatingButton onClick={openResume} className='-translate-y-8'>View my Resume</PulsatingButton>
+
+                    <div onClick={handleCopy}>
+                        <AnimatedSubscribeButton
+                            buttonColor="#000000"
+                            buttonTextColor="#ffffff"
+                            subscribeStatus={false}
+                            initialText={
+                                <span className="group inline-flex items-center">
+          Copy My Email{" "}
+                                    <ChevronRightIcon
+                                        className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1"/>
+        </span>
+                            }
+                            changeText={
+                                <span className="group inline-flex items-center">
+          <CheckIcon className="mr-2 size-4"/>
+          Copied{" "}
+        </span>
+                            }
+                        />
+                    </div>
+                </div>)}
         </div>
     );
 };

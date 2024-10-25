@@ -1,20 +1,9 @@
 "use client";
-import React, {useState} from 'react';
+import React from 'react';
 import {BentoGrid, BentoGridItem} from "@/app/components/ui/bento-grid";
 import {features} from "@/app/constants";
 
 const About = () => {
-    const [hasCopied, setHasCopied] = useState(false);
-
-    const handleCopy = () => {
-        navigator.clipboard.writeText('adithyan2802@gmail.com');
-        setHasCopied(true);
-
-        setTimeout(() => {
-            setHasCopied(false);
-        }, 2000);
-    };
-
 
     return (
         <section className="max-w-7xl mx-auto c-space " id="about">
