@@ -84,105 +84,25 @@ export const features = [
 
 export const projects = [
     {
-        name: 'Podcastr - AI Podcast Platform',
-        description: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
-        href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-        logo: '/assets/project-logo1.png',
-        logoStyle: {
-            backgroundColor: '#2A1816',
-            border: '0.2px solid #36201D',
-            boxShadow: '0px 0px 60px 0px #AA3C304D',
-        },
-        tags: [
-            {
-                id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
-            },
-        ],
+        name: 'Galactic Guardians',
+        subtitle: '3D Game',
+        description: 'Galactic Guardians is an immersive 3D experience, seamlessly powered by Rokoko’s state-of-the-art motion capture gloves for intuitive, real-time interaction. Designed for stunning engagement on large displays, it features meticulously crafted 3D models built in Blender, all brought to life in Unity through seamless Rokoko Studio integration.',
+        image: '/assets/galactic-guardians.svg',
+        href: 'https://github.com/Adithyan2802/Galactic-Guardians',
     },
     {
-        name: 'LiveDoc - Real-Time Google Docs Clone',
-        description: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-        href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-        logo: '/assets/project-logo2.png',
-        logoStyle: {
-            backgroundColor: '#13202F',
-            border: '0.2px solid #17293E',
-            boxShadow: '0px 0px 60px 0px #2F6DB54D',
-        },
-        tags: [
-            {
-                id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
-            },
-        ],
+        name: 'Sage Wallet',
+        subtitle: 'AI Cloud App',
+        description: 'Sage Wallet is a cutting-edge expense tracker and budgeting app powered by AI to deliver smart financial insights. With secure login and a beautifully interactive dashboard, Sage Wallet offers seamless cloud-based expense management, putting control of your finances at your fingertips.',
+        href: 'https://github.com/Adithyan2802/Sage-Wallet',
+        image: '/assets/sage-wallet.svg',
     },
     {
-        name: 'CarePulse - Health Management System',
-        description: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-        href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-        logo: '/assets/project-logo3.png',
-        logoStyle: {
-            backgroundColor: '#60f5a1',
-            background:
-                'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-            border: '0.2px solid rgba(208, 213, 221, 1)',
-            boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
-        },
-        tags: [
-            {
-                id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
-            },
-        ],
+        name: 'Clima Trackr',
+        subtitle: 'Weather Website',
+        description: 'Clima Trackr delivers real-time weather insights with a sleek, intuitive interface. Simply enter your city, and Clima Trackr instantly fetches current weather data using advanced API technology. Featuring a beautifully crafted page and an elegant grid layout, it’s designed to captivate while making weather details effortlessly clear.',
+        href: 'https://github.com/Adithyan2802/Clima-Trackr',
+        image: '/assets/clima-trackr.svg',
     },
 ];
 
