@@ -11,6 +11,7 @@ import {SparklesCore} from "../components/ui/sparkles";
 import BlurIn from "@/app/components/ui/blur-in";
 import ShimmerButton from "@/app/components/ui/shimmer-button";
 import {Spotlight} from "@/app/components/ui/spotlight";
+import {motion} from "framer-motion";
 
 const Hero = () => {
 
@@ -83,6 +84,26 @@ const Hero = () => {
                     </Suspense>
                 </Canvas>
             </div>
+
+            <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+                <a href='#about'>
+                    <div
+                        className='w-[32px] h-[60px] rounded-3xl border-2 border-white border-opacity-20 flex justify-center items-start p-2'>
+                        <motion.div
+                            animate={{
+                                y: [0, 24, 0],
+                            }}
+                            transition={{
+                                duration: 2.0,
+                                repeat: Infinity,
+                                repeatType: "loop",
+                            }}
+                            className='w-3 h-3 rounded-full bg-white mb-1 bg-opacity-90'
+                        />
+                    </div>
+                </a>
+            </div>
+
         </section>
     )
 }
