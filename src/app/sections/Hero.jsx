@@ -45,7 +45,7 @@ const Hero = () => {
                 className="w-full h-full absolute"
                 particleColor="#FFFFFF"/>
 
-            <div className="z-10 c-space w-full flex justify-center md:mt-8 absolute md:relative top-[30%]">
+            <div className="z-10 c-space w-full flex justify-center md:mt-8 absolute md:relative top-[32%]">
                 <a href="#contact" className="w-fit">
                     <ShimmerButton className="shadow-2xl h-4/5">
                         <span className="relative flex h-3 w-3">
