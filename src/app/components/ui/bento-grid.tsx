@@ -9,6 +9,7 @@ import Ripple from "@/app/components/ui/ripple"
 import {AnimatedSubscribeButton} from "@/app/components/ui/animated-subscribe-button"
 import {CheckIcon, ChevronRightIcon} from "lucide-react"
 import PulsatingButton from "@/app/components/ui/pulsating-button";
+import Particles from "@/app/components/ui/particles";
 
 export const BentoGrid = ({
                               className,
@@ -70,37 +71,51 @@ export const BentoGridItem = ({
                 className
             )}
         >
+            {
+                id === 2 && (
+                    <div className='translate-y-8 xl:translate-y-0 scale-110 md:scale-150 lg:scale-125 xl:scale-100'>
+                        <IconCloud iconSlugs={slugs}/>
+                    </div>)
+            }
 
-            {id === 2 && (
-                <div className='translate-y-8 md:translate-y-0 scale-110 md:scale-100'>
-                    <IconCloud iconSlugs={slugs}/>
-                </div>)}
+            {
+                id === 3 && <Meteors number={30}/>
+            }
 
-            {id === 3 && <Meteors number={30}/>}
-
-            {id === 6 && (
-                <Confetti
-                    ref={confettiRef}
-                    className="absolute left-0 top-0 z-0 size-full"
-                    onMouseEnter={() => {
-                        confettiRef.current?.fire({});
-                    }}
-                />)}
-
-            {id === 6 && (
-                <div className="relative w-11/12 h-11/12 flex flex-col justify-center items-center">
-                    {img && (
-                        <img
-                            src={img}
-                            alt={img}
-                            className={cn(imgClass, 'relative object-center object-cover translate-y-4 transition-[transform,opacity] duration-500 ease-in-out group-hover/bento:-translate-y-0 group-hover/bento:opacity-100')}
+            {
+                id === 6 && (
+                    <div>
+                        <Confetti
+                            ref={confettiRef}
+                            className="absolute left-0 top-0 z-10 size-full"
+                            onMouseEnter={() => {
+                                confettiRef.current?.fire({});
+                            }}
                         />
-                    )}
-                </div>
-            )}
+                        <img
+                            src={'/assets/spotlight1.png'}
+                            alt={'background spotlight'}
+                            className='absolute object-center object-cover top-0 left-0 h-full -z-40 -scale-x-100'
+                        />
+                    </div>)
+            }
+
+            {
+                id === 6 && (
+                    <div className="relative w-11/12 h-11/12 flex flex-col justify-center items-center">
+                        {img && (
+                            <img
+                                src={img}
+                                alt={img}
+                                className={cn(imgClass, 'relative object-center object-cover translate-y-4 transition-[transform,opacity] duration-500 ease-in-out group-hover/bento:-translate-y-0 group-hover/bento:opacity-100')}
+                            />
+                        )}
+
+                    </div>
+                )}
 
             <div className="group-hover/bento:translate-x-2 transition duration-500 ease-in-out">
-                <div className="text-2xl font-semibold heading-gradient mb-1 mt-2">
+                <div className="text-2xl md:text-xl lg:text-2xl font-semibold heading-gradient mb-1 mt-2">
                     {title}
                 </div>
                 <div className="font-normal opacity-60">
@@ -117,6 +132,7 @@ export const BentoGridItem = ({
                             className={cn(imgClass, 'scale-125 md:scale-100 relative object-center object-cover transition-transform duration-700 ease-in-out group-hover/bento:rotate-6 md:group-hover/bento:translate-x-20 group-hover/bento:translate-x-24')}
                         />
                     )}
+
                     <img
                         src='/assets/videocam.svg'
                         alt='/assets/videocam.svg'
@@ -127,6 +143,25 @@ export const BentoGridItem = ({
                         alt='/assets/cam.svg'
                         className='absolute left-2/3 md:left-3/4 top-16 opacity-60 object-center object-cover h-1/6 md:h-1/4 mx-auto transition-position duration-700 ease-in-out group-hover/bento:top-1/3 md:group-hover/bento:top-2/3'
                     />
+
+                    <img
+                        src={'/assets/spotlight1.png'}
+                        alt={'background spotlight'}
+                        className='absolute object-center object-cover bottom-0 right-0 h-full -z-40 -scale-y-100 opacity-50'
+                    />
+
+                    <img
+                        src={'/assets/spotlight5.png'}
+                        alt={'background spotlight'}
+                        className='absolute object-center object-cover bottom-0 right-0 h-full -z-40 -scale-y-100 opacity-50'
+                    />
+
+                    <img
+                        src={'/assets/spotlight3.png'}
+                        alt={'background spotlight'}
+                        className='absolute object-center object-cover top-0 left-0 h-full -z-40 -scale-x-100'
+                    />
+
                 </div>
             )}
             {id === 7 && <GlobeDemo/>}
@@ -147,12 +182,12 @@ export const BentoGridItem = ({
                     <img
                         src='/assets/handshake.svg'
                         alt='/assets/handshake.svg'
-                        className='object-center object-cover mx-auto scale-50 transition-transform duration-700 ease-in-out group-hover/bento:scale-75 translate-y-6 md:translate-y-2'
+                        className='object-center object-cover mx-auto scale-50 md:scale-75 lg:scale-50 opacity-65 transition-transform duration-700 ease-in-out group-hover/bento:scale-[60%] md:group-hover/bento:scale-90 lg:group-hover/bento:scale-75 translate-y-6 lg:translate-y-2'
                     />
                 </div>)}
 
             {id === 4 && (
-                <div className='mx-auto flex flex-col justify-center items-center'>
+                <div className='mx-auto flex flex-col justify-center items-center w-full'>
                     <PulsatingButton onClick={openResume} className='-translate-y-8'>View my
                         Resume</PulsatingButton>
 
@@ -176,19 +211,56 @@ export const BentoGridItem = ({
                             }
                         />
                     </div>
+
+                    <img
+                        src={'/assets/spotlight3.png'}
+                        alt={'background spotlight'}
+                        className='absolute object-center object-cover bottom-0 right-0 h-full -z-40 -scale-y-100'
+                    />
                 </div>)}
 
             <img
                 src={'/assets/spotlight2.png'}
                 alt={'background spotlight'}
-                className='absolute object-center object-cover -top-4 right-0 h-full'
+                className='absolute object-center object-cover -top-4 right-0 h-full -z-40'
             />
 
             <img
                 src={'/assets/spotlight5.png'}
                 alt={'background spotlight'}
-                className='absolute object-center object-cover bottom-0 left-0 rotate-180 h-full'
+                className='absolute object-center object-cover bottom-0 left-0 rotate-180 h-full -z-40'
             />
+
+            {id === 1 && (
+                <div className='w-full'>
+                    <Particles
+                        className="absolute inset-0"
+                        quantity={40}
+                        ease={80}
+                        color="#ffffff"
+                        refresh
+                    />
+
+                    <img
+                        src={'/assets/me.svg'}
+                        alt={'avatar'}
+                        className='w-44 transition-transform mx-auto lg:translate-x-3/4 translate-y-6 md:-translate-y-6 xl:translate-y-0 opacity-90 duration-700 ease-in-out md:group-hover/bento:-translate-y-12 xl:group-hover/bento:-translate-y-8 group-hover/bento:translate-y-0'
+                    />
+
+                    <img
+                        src={'/assets/spotlight1.png'}
+                        alt={'background spotlight'}
+                        className='absolute object-center object-cover bottom-0 right-0 h-full -z-40 -scale-y-100 opacity-50'
+                    />
+
+                    <img
+                        src={'/assets/spotlight5.png'}
+                        alt={'background spotlight'}
+                        className='absolute object-center object-cover bottom-0 right-0 h-full -z-40 -scale-y-100 opacity-50'
+                    />
+                </div>
+            )
+            }
 
         </div>
     );
