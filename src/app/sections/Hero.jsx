@@ -21,7 +21,7 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile);
 
     return (
-        <section className="min-h-screen flex flex-col relative overflow-clip" id="home">
+        <section className="min-h-screen flex flex-col relative overflow-hidden" id="home">
             <Spotlight
                 className="-top-40 left-0 md:left-40 md:-top-20"
                 fill="#fcba03"

@@ -30,7 +30,7 @@ const Contact = () => {
         emailjs
             .send(
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-                'template_xbnxs2h',
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
                 {
                     from_name: form.name,
                     to_name: 'Adithyan Sathyanarayanan',
@@ -38,7 +38,7 @@ const Contact = () => {
                     to_email: 'adithyan2802@gmail.com',
                     message: form.message,
                 },
-                '_QtQF9_5CKAg18oJ2'
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
             )
             .then(
                 () => {
