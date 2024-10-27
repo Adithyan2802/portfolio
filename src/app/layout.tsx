@@ -4,7 +4,7 @@ import {ThemeProvider} from "./provider";
 
 export const metadata: Metadata = {
     title: "Adithyan's Portfolio",
-    description: "My personal work",
+    description: "My Amazing Portfolio",
 };
 
 export default function RootLayout({

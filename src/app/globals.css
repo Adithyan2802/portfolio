@@ -22,7 +22,7 @@ body {
     }
 
     .head-text {
-        @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+        @apply sm:text-4xl text-3xl font-semibold;
     }
 
     .nav-ul {
@@ -133,7 +133,7 @@ body {
 
     /* contact section */
     .contact-container {
-        @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12;
+        @apply max-w-xl relative z-10 sm:px-10 md:px-5 md:mt-12;
     }
 
     .field-label {
@@ -141,7 +141,7 @@ body {
     }
 
     .field-input {
-        @apply w-full bg-black-300 px-5 py-2 min-h-14 rounded-lg placeholder:text-white-500 text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none;
+        @apply w-full bg-white bg-opacity-20 px-5 py-2 min-h-14 rounded-xl placeholder:text-white placeholder:text-opacity-60 text-lg text-white shadow-black-200 shadow-2xl focus:outline focus:outline-1 focus:outline-white/50;
     }
 
     .field-btn {
@@ -185,6 +185,10 @@ body {
 .project-box-gradient {
     background: rgb(11, 2, 30);
     background: radial-gradient(circle, rgba(5, 0, 10, 1) 0%, rgba(15, 1, 30, 0.9) 40%, rgba(20, 0, 45, 1) 71%, rgba(10, 1, 30, 1) 100%);
+}
+
+.contact-background {
+    background: linear-gradient(315deg, #000622, #1B0B40, #2b0b46);
 }
 
 .title-name {

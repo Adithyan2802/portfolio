@@ -24,7 +24,7 @@ const ProjectCard = ({index, name, subtitle, description, logo, image, href,}) =
                         <div className='absolute -top-6 flex justify-end m-3 w-full gap-1'>
                             <div
                                 onClick={() => window.open(href, "_blank")}
-                                className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                                className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:opacity-80'
                             >
                                 <img
                                     src='/assets/github.svg'
@@ -36,7 +36,7 @@ const ProjectCard = ({index, name, subtitle, description, logo, image, href,}) =
                             {index === 1 && (
                                 <div
                                     onClick={() => window.open('https://sage-wallet.vercel.app', "_blank")}
-                                    className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                                    className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:opacity-80'
                                 >
                                     <img
                                         src='/assets/live.svg'
@@ -97,7 +97,7 @@ const Projects = () => {
                 <p className="hero_tag heading-gradient ">Projects</p>
             </div>
 
-            <div className="my-20 flex flex-wrap gap-10 justify-around">
+            <div className="my-10 md:my-20 flex flex-wrap gap-10 justify-around">
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={`project-${index}`}

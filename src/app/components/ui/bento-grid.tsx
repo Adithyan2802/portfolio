@@ -66,11 +66,14 @@ export const BentoGridItem = ({
 
         <div
             className={cn(
-                "row-span-1 relative overflow-hidden rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:bg-opacity-5 dark:border-white/[0.1] bg-white border border-transparent justify-between flex flex-col space-y-4",
+                "row-span-1 relative overflow-hidden rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:bg-opacity-5 dark:border-white/[0.1] border border-transparent justify-between flex flex-col space-y-4 min-h-[400px] md:min-h-28",
                 className
             )}
         >
-            {id === 2 && <IconCloud iconSlugs={slugs}/>}
+            {id === 2 && (
+                <div className='translate-y-8 md:translate-y-0 scale-110 md:scale-100'>
+                    <IconCloud iconSlugs={slugs}/>
+                </div>)}
 
             {id === 3 && <Meteors number={30}/>}
 
@@ -110,18 +113,18 @@ export const BentoGridItem = ({
                         <img
                             src={img}
                             alt={img}
-                            className={cn(imgClass, 'relative object-center object-cover transition-transform duration-700 ease-in-out group-hover/bento:rotate-6 group-hover/bento:translate-x-20')}
+                            className={cn(imgClass, 'scale-125 md:scale-100 relative object-center object-cover transition-transform duration-700 ease-in-out group-hover/bento:rotate-6 md:group-hover/bento:translate-x-20 group-hover/bento:translate-x-24')}
                         />
                     )}
                     <img
                         src='/assets/videocam.svg'
                         alt='/assets/videocam.svg'
-                        className='absolute left-2 opacity-60 object-center object-cover h-1/2 mx-auto transition-transform duration-700 ease-in-out group-hover/bento:-translate-y-1/2'
+                        className='absolute left-0 md:left-2 bottom-0 opacity-60 object-center object-cover h-1/3 md:h-1/2 mx-auto transition-transform duration-700 ease-in-out group-hover/bento:-translate-y-2/3 md:group-hover/bento:-translate-y-1/2'
                     />
                     <img
                         src='/assets/cam.svg'
                         alt='/assets/cam.svg'
-                        className='absolute left-3/4 top-16 opacity-60 object-center object-cover h-1/4 mx-auto transition-position duration-700 ease-in-out group-hover/bento:top-2/3'
+                        className='absolute left-2/3 md:left-3/4 top-16 opacity-60 object-center object-cover h-1/6 md:h-1/4 mx-auto transition-position duration-700 ease-in-out group-hover/bento:top-1/3 md:group-hover/bento:top-2/3'
                     />
                 </div>
             )}
@@ -132,7 +135,7 @@ export const BentoGridItem = ({
                     <img
                         src='/assets/flash.svg'
                         alt='/assets/flash.svg'
-                        className='object-center object-cover w-2/3 mx-auto transition-transform duration-700 ease-in-out group-hover/bento:scale-150'
+                        className='absolute overflow-auto -top-4 md:top-20 w-48 left-0 right-0 mx-auto transition-transform duration-700 ease-in-out group-hover/bento:scale-150'
                     />
                 </div>
             )}
@@ -143,13 +146,14 @@ export const BentoGridItem = ({
                     <img
                         src='/assets/handshake.svg'
                         alt='/assets/handshake.svg'
-                        className='object-center object-cover mx-auto scale-50 transition-transform duration-700 ease-in-out group-hover/bento:scale-75'
+                        className='object-center object-cover mx-auto scale-50 transition-transform duration-700 ease-in-out group-hover/bento:scale-75 translate-y-6 md:translate-y-2'
                     />
                 </div>)}
 
             {id === 4 && (
                 <div className='mx-auto flex flex-col justify-center items-center'>
-                    <PulsatingButton onClick={openResume} className='-translate-y-8'>View my Resume</PulsatingButton>
+                    <PulsatingButton onClick={openResume} className='-translate-y-8'>View my
+                        Resume</PulsatingButton>
 
                     <div onClick={handleCopy}>
                         <AnimatedSubscribeButton

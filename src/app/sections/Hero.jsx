@@ -21,7 +21,7 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile);
 
     return (
-        <section className="min-h-screen flex flex-col relative" id="home">
+        <section className="min-h-screen flex flex-col relative overflow-clip" id="home">
             <Spotlight
                 className="-top-40 left-0 md:left-40 md:-top-20"
                 fill="#fcba03"
@@ -45,7 +45,7 @@ const Hero = () => {
                 className="w-full h-full absolute"
                 particleColor="#FFFFFF"/>
 
-            <div className="z-10 c-space w-full flex justify-center mt-8">
+            <div className="z-10 c-space w-full flex justify-center md:mt-8 absolute md:relative top-[30%]">
                 <a href="#contact" className="w-fit">
                     <ShimmerButton className="shadow-2xl h-4/5">
                         <span className="relative flex h-3 w-3">
@@ -60,7 +60,7 @@ const Hero = () => {
                 </a>
             </div>
 
-            <div className="w-full mx-auto flex flex-col mt-4 c-space gap-3">
+            <div className="w-full mx-auto flex flex-col md:mt-4 c-space gap-3 mt-24">
                 <p className="xl:text-4xl md:text-3xl sm:text-2xl text-xl title-name font-bold shadow-inner text-white text-center">
                     Adithyan Sathyanarayanan {" "}
                     <span className="waving-hand">👋</span>
@@ -85,7 +85,7 @@ const Hero = () => {
                 </Canvas>
             </div>
 
-            <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+            <div className='absolute bottom-14 md:bottom-32 w-full flex justify-center items-center'>
                 <a href='#about'>
                     <div
                         className='w-[32px] h-[60px] rounded-3xl border-2 border-white border-opacity-20 flex justify-center items-start p-2'>
