@@ -3,7 +3,7 @@ import {GlobeDemo} from "@/app/components/ui/gridglobe";
 import IconCloud from "@/app/components/ui/icon-cloud";
 import {slugs} from "@/app/constants";
 import Confetti, {ConfettiRef} from "@/app/components/ui/confetti";
-import {useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import Meteors from "@/app/components/ui/meteors"
 import Ripple from "@/app/components/ui/ripple"
 import {AnimatedSubscribeButton} from "@/app/components/ui/animated-subscribe-button"
@@ -66,10 +66,11 @@ export const BentoGridItem = ({
 
         <div
             className={cn(
-                "row-span-1 relative overflow-hidden rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:bg-opacity-5 dark:border-white/[0.1] border border-transparent justify-between flex flex-col space-y-4 min-h-[400px] md:min-h-28",
+                "row-span-1 relative overflow-hidden rounded-xl group/bento hover:shadow-xl transition duration-200 dark:shadow-none p-4 dark:bg-black dark:bg-opacity-5 dark:border-white/[0.1] border border-transparent justify-between flex flex-col space-y-4 min-h-[400px] md:min-h-28",
                 className
             )}
         >
+
             {id === 2 && (
                 <div className='translate-y-8 md:translate-y-0 scale-110 md:scale-100'>
                     <IconCloud iconSlugs={slugs}/>
@@ -162,20 +163,33 @@ export const BentoGridItem = ({
                             subscribeStatus={false}
                             initialText={
                                 <span className="group inline-flex items-center">
-          Copy My Email{" "}
+                                    Copy My Email{" "}
                                     <ChevronRightIcon
                                         className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1"/>
-        </span>
+                                </span>
                             }
                             changeText={
                                 <span className="group inline-flex items-center">
-          <CheckIcon className="mr-2 size-4"/>
-          Copied{" "}
-        </span>
+                                     <CheckIcon className="mr-2 size-4"/>
+                                     Copied{" "}
+                                </span>
                             }
                         />
                     </div>
                 </div>)}
+
+            <img
+                src={'/assets/spotlight2.png'}
+                alt={'background spotlight'}
+                className='absolute object-center object-cover -top-4 right-0 h-full'
+            />
+
+            <img
+                src={'/assets/spotlight5.png'}
+                alt={'background spotlight'}
+                className='absolute object-center object-cover bottom-0 left-0 rotate-180 h-full'
+            />
+
         </div>
     );
 };

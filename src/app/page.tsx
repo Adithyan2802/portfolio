@@ -4,11 +4,12 @@ import Footer from "./sections/Footer"
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Partition from "./sections/Partition";
+import Navbar from "@/app/sections/Navbar";
 
 export default function Home() {
     return (
         <main className="mx-auto relative">
-            {/*<Navbar/>*/}
+            <Navbar/>
             <Hero/>
             <Partition/>
             <About/>
