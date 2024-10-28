@@ -3,7 +3,7 @@ import {GlobeDemo} from "@/app/components/ui/gridglobe";
 import IconCloud from "@/app/components/ui/icon-cloud";
 import {slugs} from "@/app/constants";
 import Confetti, {ConfettiRef} from "@/app/components/ui/confetti";
-import React, {useRef, useState} from "react";
+import React, {CSSProperties, useRef, useState} from "react";
 import Meteors from "@/app/components/ui/meteors"
 import Ripple from "@/app/components/ui/ripple"
 import {AnimatedSubscribeButton} from "@/app/components/ui/animated-subscribe-button"
@@ -63,14 +63,33 @@ export const BentoGridItem = ({
         window.open('/assets/resume.pdf', '_blank');
     };
 
-    return (
+    // Handle hover effect
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    const handleMouseMove = (e) => {
+        const card = e.currentTarget;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+    };
+
+    return (
         <div
             className={cn(
                 "row-span-1 relative overflow-hidden rounded-xl group/bento hover:shadow-xl transition duration-200 dark:shadow-none p-4 dark:bg-black dark:bg-opacity-5 dark:border-white/[0.1] border border-transparent justify-between flex flex-col space-y-4 min-h-[400px] md:min-h-28",
                 className
             )}
+            onMouseMove={handleMouseMove}
+            style={{
+                '--x': "50%",
+                '--y': "50%",
+                position: "relative",
+            } as CSSProperties & { "--x": string; "--y": string }}
         >
+
             {
                 id === 2 && (
                     <div className='translate-y-8 xl:translate-y-0 scale-110 md:scale-150 lg:scale-125 xl:scale-100'>
@@ -181,8 +200,8 @@ export const BentoGridItem = ({
                     <Ripple/>
                     <img
                         src='/assets/handshake.svg'
-                        alt='/assets/handshake.svg'
-                        className='object-center object-cover mx-auto scale-50 md:scale-75 lg:scale-50 opacity-65 transition-transform duration-700 ease-in-out group-hover/bento:scale-[60%] md:group-hover/bento:scale-90 lg:group-hover/bento:scale-75 translate-y-6 lg:translate-y-2'
+                        alt='handshake'
+                        className='object-center object-cover mx-auto scale-50 md:scale-75 lg:scale-50 transition-transform duration-700 ease-in-out group-hover/bento:scale-[60%] md:group-hover/bento:scale-90 lg:group-hover/bento:scale-75 translate-y-6 lg:translate-y-2'
                     />
                 </div>)}
 
@@ -261,6 +280,19 @@ export const BentoGridItem = ({
                 </div>
             )
             }
+
+            <div
+                style={{
+                    position: "absolute",
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    background: "radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.3), transparent 50%)",
+                    transition: "opacity 0.3s ease",
+                    pointerEvents: "none",
+                }}
+                className="z-10 -top-4 opacity-0 group-hover/bento:opacity-50"
+            />
 
         </div>
     );

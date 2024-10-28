@@ -17,9 +17,9 @@ const ProjectCard = ({index, name, subtitle, description, logo, image, href,}) =
             <motion.div>
                 <Tilt
                     options={{max: 20, scale: 1.04, speed: 4000,}}
-                    className="bg-white p-5 rounded-2xl sm:w-[360px] w-full opacity-65 hover:opacity-90"
+                    className="bg-white p-5 rounded-2xl sm:w-[360px] opacity-65 hover:opacity-90"
                 >
-                    <div className='relative w-full h-[430px] items-center flex flex-col justify-center'>
+                    <div className='relative items-center flex flex-col justify-center'>
 
                         <div className='absolute -top-6 flex justify-end m-3 w-full gap-1'>
                             <div

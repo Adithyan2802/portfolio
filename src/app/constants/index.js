@@ -48,7 +48,7 @@ export const slugs = [
 
 export const features = [
     {
-        title: 'Hi, I\'m Adhi ',
+        title: 'Hey, I\'m Adhi ',
         description: 'Innovative problem-solver with a passion for crafting seamless digital experiences. Always pushing boundaries, I merge creativity with cutting-edge technology to deliver elegant solutions that inspire.',
         id: 1,
         className: 'md:col-span-2'

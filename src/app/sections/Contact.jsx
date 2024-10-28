@@ -149,7 +149,7 @@ const Contact = () => {
 
                             <ShimmerButton className="shadow-2xl" type="submit" disabled={loading}>
                                 <span
-                                    className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg">
+                                    className="whitespace-pre-wrap text-center text-md font-medium leading-none tracking-tight text-white lg:text-lg">
                                 {loading ? 'Sending...' : 'Send Message'}
                                 </span>
                                 <img src="/assets/arrow-up.png" alt="arrow-up" className="ml-4 field-btn_arrow"/>
