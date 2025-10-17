@@ -48,7 +48,7 @@ export const slugs = [
 
 export const features = [
   {
-    title: "Hey, I'm Adhi ",
+    title: "Hey, I'm Adi ",
     description:
       "Innovative problem-solver with a passion for crafting seamless digital experiences. Always pushing boundaries, I merge creativity with cutting-edge technology to deliver elegant solutions that inspire.",
     id: 1,
@@ -89,6 +89,14 @@ export const projects = [
       "Galactic Guardians is an immersive 3D experience, seamlessly powered by Rokoko’s state-of-the-art motion capture gloves for intuitive, real-time interaction. Designed for stunning engagement on large displays, it features meticulously crafted 3D models built in Blender, all brought to life in Unity through seamless Rokoko Studio integration.",
     image: "/assets/galactic-guardians.svg",
     href: "https://github.com/Adithyan2802/Galactic-Guardians",
+  },
+  {
+    name: "Home Mod",
+    subtitle: "Real Estate Website",
+    description:
+      "HomeMod is a premium web platform built for a 3D architectural visualization company, designed to showcase their work and services through elegant motion, photoreal visuals, and modern UI design. Developed using React, Vite, Tailwind CSS, and Framer Motion, the website combines performance and aesthetics — delivering a visually immersive experience that reflects the precision and creativity behind architectural craftsmanship.",
+    href: "https://github.com/Adithyan2802/Home-Mod",
+    image: "/assets/home-mod.svg",
   },
   {
     name: "Sage Wallet",
